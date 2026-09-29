@@ -318,3 +318,76 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
     justify-content:flex-start;
   }
 }
+
+/* Integrated Stef effect + food section */
+.stef-effect{
+  background:
+    linear-gradient(rgba(224,231,225,.88),rgba(224,231,225,.88)),
+    url("https://images.pexels.com/photos/9634190/pexels-photo-9634190.jpeg?auto=compress&dpr=1&h=1200&w=1800") center/cover;
+  position:relative;
+  overflow:hidden;
+}
+.stef-effect-grid{
+  display:grid;
+  grid-template-columns:1.05fr .75fr;
+  gap:100px;
+  align-items:center;
+}
+.stef-effect-copy>p:not(.eyebrow):not(.script-quote){
+  font-size:18px;
+  color:#53625e;
+  max-width:650px;
+}
+.stef-effect-copy .script-quote{
+  font-size:46px;
+  margin-top:32px;
+}
+.stef-effect-note{
+  background:#fffdf8;
+  border:1px solid #d1cec3;
+  padding:45px 42px;
+  box-shadow:0 18px 38px rgba(35,48,43,.09);
+  transform:rotate(1.2deg);
+}
+.stef-effect-note .soup-icon{
+  font-size:48px;
+  color:#78958b;
+}
+.soup-label{
+  font:600 10px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:#71807a;
+  margin:14px 0;
+}
+.stef-effect-note h3{
+  font-size:44px;
+  line-height:.95;
+  margin:0 0 22px;
+}
+.note-rule{
+  height:1px;
+  background:#d5d3ca;
+  margin:25px 0;
+}
+.stef-effect-note>p:not(.soup-label):not(.note-script){
+  font:15px/1.6 var(--sans);
+  color:#64706b;
+}
+.note-script{
+  font:31px/1.05 var(--script);
+  color:#355b5c;
+  margin-top:26px;
+}
+@media(max-width:900px){
+  .stef-effect-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+  .stef-effect-note{max-width:520px}
+}
+@media(max-width:760px){
+  .stef-effect-copy .script-quote{font-size:40px}
+  .stef-effect-note{padding:35px 28px}
+  .stef-effect-note h3{font-size:38px}
+}
