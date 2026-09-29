@@ -169,3 +169,108 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
  .share-type{min-height:160px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+/* Navigation visibility */
+.nav{
+  padding:32px 0;
+  font-size:14px;
+}
+.navlinks{
+  gap:38px;
+}
+.navlinks a{
+  padding:8px 0;
+  white-space:nowrap;
+}
+.brand{
+  font-size:14px;
+}
+@media(max-width:900px){
+  .nav{font-size:13px}
+  .navlinks{gap:20px}
+  .brand{font-size:12px}
+}
+@media(max-width:760px){
+  .nav{
+    padding:24px 0;
+    font-size:12px;
+  }
+  .brand{font-size:11px}
+  .navlinks{display:flex;gap:13px}
+}
+@media(max-width:520px){
+  .nav{
+    align-items:flex-start;
+    gap:14px;
+  }
+  .brand{font-size:10px;letter-spacing:.1em}
+  .navlinks{
+    gap:9px;
+    font-size:9px;
+    letter-spacing:.08em;
+  }
+}
+
+/* Food love section */
+.food-love{
+  background:#f7f3e9;
+  position:relative;
+  overflow:hidden;
+}
+.food-love:before{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  right:-180px;
+  top:-170px;
+  background:rgba(157,181,171,.14);
+}
+.food-love-grid{
+  display:grid;
+  grid-template-columns:1.05fr .75fr;
+  gap:100px;
+  align-items:center;
+}
+.food-love-copy>p:not(.eyebrow):not(.script-quote){
+  font-size:18px;
+  color:#53615d;
+  max-width:600px;
+}
+.food-love-copy .script-quote{
+  font-size:43px;
+  margin-top:32px;
+}
+.soup-card{
+  background:#fffdf8;
+  border:1px solid #d1cec3;
+  padding:48px 42px;
+  box-shadow:0 18px 38px rgba(35,48,43,.08);
+  transform:rotate(1.5deg);
+}
+.soup-icon{
+  font-size:48px;
+  color:#78958b;
+}
+.soup-label{
+  font:600 10px var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  color:#71807a;
+  margin:15px 0;
+}
+.soup-card h3{
+  font-size:45px;
+  line-height:.95;
+  margin:0 0 22px;
+}
+.soup-card>p:last-child{
+  font:15px/1.55 var(--sans);
+  color:#64706b;
+  max-width:300px;
+}
+@media(max-width:900px){
+  .food-love-grid{grid-template-columns:1fr;gap:50px}
+  .soup-card{max-width:500px}
+}
