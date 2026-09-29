@@ -274,3 +274,28 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
   .food-love-grid{grid-template-columns:1fr;gap:50px}
   .soup-card{max-width:500px}
 }
+
+/* Keep the memorial navigation visible and anchored to the right */
+.nav{
+  justify-content:flex-end;
+}
+.navlinks{
+  margin-left:auto;
+  justify-content:flex-end;
+  align-items:center;
+}
+.navlinks a{
+  color:var(--deep);
+  text-shadow:0 1px 2px rgba(255,255,255,.75);
+  font-weight:600;
+}
+@media(max-width:760px){
+  .nav{
+    justify-content:flex-end;
+  }
+  .navlinks{
+    margin-left:0;
+    width:100%;
+    justify-content:flex-end;
+  }
+}
