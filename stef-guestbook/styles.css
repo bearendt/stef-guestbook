@@ -299,3 +299,22 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
     justify-content:flex-end;
   }
 }
+
+/* Place the primary navigation over the lighter left side of the hero */
+.nav{
+  justify-content:flex-start;
+}
+.navlinks{
+  margin-left:0;
+  justify-content:flex-start;
+}
+@media(max-width:760px){
+  .nav{
+    justify-content:flex-start;
+  }
+  .navlinks{
+    width:auto;
+    margin-left:0;
+    justify-content:flex-start;
+  }
+}
