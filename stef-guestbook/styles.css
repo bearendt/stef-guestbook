@@ -443,3 +443,24 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 .memory-rose { background: #f1e8e5; }
 .memory-sand { background: #eee9dc; }
 .memory-card.people-memory .tag { color: #64756e; }
+
+
+/* Final memory wall styling */
+.memory-card.people-memory.memory-sage { background:#e5eee7 !important; }
+.memory-card.people-memory.memory-blue { background:#e5ebf0 !important; }
+.memory-card.people-memory.memory-lavender { background:#eee8ef !important; }
+.memory-card.people-memory.memory-rose { background:#f1e6e2 !important; }
+.memory-card.people-memory.memory-sand { background:#eee9d9 !important; }
+.memory-card.memory-mist { background:#e7eeeb !important; color:var(--ink); }
+.memory-card.memory-cream { background:#f0e9da !important; }
+.memory-card.memory-peach { background:#f2e7df !important; }
+.memory-card.people-memory .memory-text,
+.memory-card.memory-mist .memory-text,
+.memory-card.memory-cream .memory-text,
+.memory-card.memory-peach .memory-text {
+  font-size:21px;
+  line-height:1.35;
+}
+.memory-card.people-memory .memory-text + .memory-text {
+  margin-top:12px;
+}
