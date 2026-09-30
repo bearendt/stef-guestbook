@@ -408,3 +408,8 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 .testimonial-wide{grid-column:1/-1}
 .testimonial p{font:21px/1.45 var(--serif);color:#425654;margin:0 0 15px}
 .testimonial cite{font:600 10px var(--sans);text-transform:uppercase;letter-spacing:.14em;color:#74817c;font-style:normal}
+
+
+/* Stefanie photo placeholder */
+.photo-placeholder.large{overflow:hidden;}
+.photo-placeholder.large img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.88) contrast(.98);}
