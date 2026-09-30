@@ -408,22 +408,3 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 .testimonial-wide{grid-column:1/-1}
 .testimonial p{font:21px/1.45 var(--serif);color:#425654;margin:0 0 15px}
 .testimonial cite{font:600 10px var(--sans);text-transform:uppercase;letter-spacing:.14em;color:#74817c;font-style:normal}
-.word-section{margin-top:105px;padding-top:55px;border-top:1px solid var(--line)}
-.word-cloud{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 18px;max-width:1000px;margin:35px auto 0}
-.word-cloud span{font:21px/1.1 var(--serif);color:#4e6863;padding:4px 9px}
-.word-cloud span.medium{font-size:28px;color:#365a59}
-.word-cloud span.large{font-size:37px;color:var(--deep)}
-.word-cloud span.script-word{font:39px var(--script);color:#52756c}
-@media(max-width:760px){
- .quote-cards,.testimonial-grid{grid-template-columns:1fr}
- .stef-quote.featured-quote{transform:none}
- .stef-quote p,.stef-quote.featured-quote p{font-size:29px}
- .testimonial-wide{grid-column:auto}
- .testimonial{padding:28px}
- .testimonial p{font-size:19px}
- .word-section{margin-top:70px}
- .word-cloud{gap:9px 12px}
- .word-cloud span{font-size:18px}
- .word-cloud span.medium{font-size:24px}
- .word-cloud span.large{font-size:30px}
-}
