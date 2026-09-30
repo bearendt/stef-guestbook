@@ -433,3 +433,13 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 .people-memory .memory-text + .memory-text {
   margin-top: 16px;
 }
+
+
+/* Individual memory colors */
+.memory-card.people-memory { border-color: rgba(63,91,84,.14); }
+.memory-sage { background: #e8eee9; }
+.memory-blue { background: #e8edf1; }
+.memory-lavender { background: #eee9ef; }
+.memory-rose { background: #f1e8e5; }
+.memory-sand { background: #eee9dc; }
+.memory-card.people-memory .tag { color: #64756e; }
