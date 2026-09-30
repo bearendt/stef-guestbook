@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Allura&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="supabase-guestbook.js" defer></script>
 </head>
 <body>
   <header class="hero" id="top">
@@ -235,13 +238,8 @@
           <p class="script-quote">“Celebrate a life so fiercely lived.”</p>
         </div>
 
-        <form class="memory-form" name="stef-memory" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
-          <input type="hidden" name="form-name" value="stef-memory">
-          <p class="hidden">
-            <label>Don't fill this out if you're human: <input name="bot-field"></label>
-          </p>
-
-          <label>Your name
+        <form class="memory-form" name="stef-memory">
+<label>Your name
             <input type="text" name="name" autocomplete="name" required>
           </label>
 
@@ -267,7 +265,7 @@
           </label>
 
           <button class="button button-dark full" type="submit">Add this memory</button>
-          <p class="form-note">Submissions are reviewed before they appear publicly.</p>
+          <p class="form-note">Your memory will appear on the guest book when you submit it.</p>
         </form>
       </div>
     </section>
