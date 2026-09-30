@@ -391,3 +391,39 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
   .stef-effect-note{padding:35px 28px}
   .stef-effect-note h3{font-size:38px}
 }
+
+/* Stef's words and memories */
+.stef-words{background:#f0eee6}
+.section-head.simple{align-items:flex-start;margin-bottom:45px}
+.quote-cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.stef-quote{margin:0;background:#fffdf8;border:1px solid #d2cec2;padding:48px;min-height:270px;box-shadow:0 12px 30px rgba(35,48,43,.06);position:relative}
+.stef-quote span{font:85px/.5 var(--serif);color:#8ba198;position:absolute;left:24px;top:30px}
+.stef-quote p{font:34px/1.15 var(--serif);color:var(--deep);margin:55px 0 0;max-width:650px}
+.stef-quote.featured-quote{background:var(--deep);color:white;transform:translateY(28px)}
+.stef-quote.featured-quote p{color:white;font-size:42px}
+.stef-quote.featured-quote span{color:#a9bdb5}
+.people-memories{background:var(--paper)}
+.testimonial-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.testimonial{background:#fffdf8;border:1px solid var(--line);padding:36px 38px;box-shadow:0 8px 22px rgba(35,48,43,.04)}
+.testimonial-wide{grid-column:1/-1}
+.testimonial p{font:21px/1.45 var(--serif);color:#425654;margin:0 0 15px}
+.testimonial cite{font:600 10px var(--sans);text-transform:uppercase;letter-spacing:.14em;color:#74817c;font-style:normal}
+.word-section{margin-top:105px;padding-top:55px;border-top:1px solid var(--line)}
+.word-cloud{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 18px;max-width:1000px;margin:35px auto 0}
+.word-cloud span{font:21px/1.1 var(--serif);color:#4e6863;padding:4px 9px}
+.word-cloud span.medium{font-size:28px;color:#365a59}
+.word-cloud span.large{font-size:37px;color:var(--deep)}
+.word-cloud span.script-word{font:39px var(--script);color:#52756c}
+@media(max-width:760px){
+ .quote-cards,.testimonial-grid{grid-template-columns:1fr}
+ .stef-quote.featured-quote{transform:none}
+ .stef-quote p,.stef-quote.featured-quote p{font-size:29px}
+ .testimonial-wide{grid-column:auto}
+ .testimonial{padding:28px}
+ .testimonial p{font-size:19px}
+ .word-section{margin-top:70px}
+ .word-cloud{gap:9px 12px}
+ .word-cloud span{font-size:18px}
+ .word-cloud span.medium{font-size:24px}
+ .word-cloud span.large{font-size:30px}
+}
