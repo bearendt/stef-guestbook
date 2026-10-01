@@ -177,3 +177,10 @@
 
   loadMemories();
 })();
+
+
+// Use the supplied Stefanie photo as the memorial portrait.
+const memorialPhoto = document.querySelector(".about-photo img");
+if (memorialPhoto) {
+  memorialPhoto.src = "images/stefanie.jpg";
+}
