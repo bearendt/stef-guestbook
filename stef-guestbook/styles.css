@@ -474,3 +474,31 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 .memory-form-status[data-type="success"] { color:#365844; }
 .memory-form button:disabled { opacity:.65; cursor:wait; }
 @keyframes memory-in { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
+
+
+/* Private memory manager */
+.admin-page { min-height:100vh; background:#f5f1e8; }
+.admin-wrap { width:min(1000px, calc(100% - 40px)); margin:0 auto; padding:64px 0 80px; }
+.admin-header { display:flex; justify-content:space-between; align-items:flex-start; gap:32px; margin-bottom:40px; }
+.admin-panel { background:#fffdf8; border:1px solid rgba(63,91,84,.14); padding:28px; margin-bottom:24px; }
+.admin-panel h2 { margin-top:0; }
+.admin-login-form { max-width:480px; display:grid; gap:16px; }
+.admin-login-form label { display:grid; gap:7px; }
+.admin-login-form input { width:100%; box-sizing:border-box; }
+.admin-toolbar { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.admin-toolbar h2 { margin:0; }
+.admin-memory-list { display:grid; gap:16px; }
+.admin-memory { display:flex; justify-content:space-between; gap:24px; padding:22px; background:#f0e9da; border:1px solid rgba(63,91,84,.12); }
+.admin-memory-content { min-width:0; flex:1; }
+.admin-memory-meta { margin:0 0 8px; font-size:13px; color:#64756e; }
+.admin-memory-state { display:inline-block; margin-bottom:12px; padding:4px 8px; border-radius:20px; background:#e5eee7; color:#365844; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; }
+.admin-memory-text { margin:0; white-space:pre-wrap; font-size:16px; line-height:1.55; }
+.admin-memory-actions { display:flex; flex-direction:column; gap:8px; flex-shrink:0; }
+.admin-memory-actions .button { min-width:90px; }
+.button-danger { border:1px solid #b56b62; background:transparent; color:#8b3e3e; }
+.button-danger:hover { background:#f1e1de; }
+.admin-photo-link { display:inline-block; margin-top:14px; color:#53665e; }
+@media (max-width:700px) {
+  .admin-header, .admin-memory { flex-direction:column; }
+  .admin-memory-actions { flex-direction:row; }
+}
