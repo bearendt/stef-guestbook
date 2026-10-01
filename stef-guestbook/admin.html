@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage Stef's Guest Book</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js" defer></script>
+</head>
+<body class="admin-page">
+  <main class="admin-wrap">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Private guest book</p>
+        <h1>Manage memories</h1>
+        <p class="section-intro">Hide a memory from the public wall or permanently delete it.</p>
+      </div>
+      <a class="button button-outline" href="index.html">Back to guest book</a>
+    </header>
+    <section id="login-panel" class="admin-panel">
+      <h2>Admin sign in</h2>
+      <p>Sign in with the Supabase account you created for managing the guest book.</p>
+      <form id="login-form" class="admin-login-form">
+        <label>Email
+          <input id="admin-email" type="email" autocomplete="email" required>
+        </label>
+        <label>Password
+          <input id="admin-password" type="password" autocomplete="current-password" required>
+        </label>
+        <button class="button button-dark" type="submit">Sign in</button>
+        <p id="login-status" class="memory-form-status"></p>
+      </form>
+    </section>
+    <section id="manage-panel" class="admin-panel" hidden>
+      <div class="admin-toolbar">
+        <h2>All memories</h2>
+        <button id="sign-out" class="button button-outline" type="button">Sign out</button>
+      </div>
+      <p id="manage-status" class="memory-form-status"></p>
+      <div id="admin-memories" class="admin-memory-list"></div>
+    </section>
+  </main>
+</body>
+</html>
