@@ -573,3 +573,58 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
   .memory-card{min-height:230px}
   .people-copy-centered .script-quote{font-size:36px}
 }
+
+
+/* Long memories fold into the note and can be opened without changing the wall layout */
+.memory-content{
+  position:relative;
+  max-height:150px;
+  overflow:hidden;
+  transition:max-height .35s ease;
+}
+.memory-content::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:58px;
+  background:linear-gradient(to bottom,rgba(255,255,255,0),var(--memory-paper,#fff));
+  pointer-events:none;
+}
+.memory-card.memory-sage .memory-content{--memory-paper:#dce5dc}
+.memory-card.memory-blue .memory-content{--memory-paper:#dce2e8}
+.memory-card.memory-lavender .memory-content{--memory-paper:#e5e0eb}
+.memory-card.memory-rose .memory-content{--memory-paper:#eadcdf}
+.memory-card.memory-sand .memory-content{--memory-paper:#eee4d1}
+.memory-card.memory-mist .memory-content{--memory-paper:#e8ece8}
+.memory-card.memory-cream .memory-content{--memory-paper:#ece6d8}
+.memory-card.memory-peach .memory-content{--memory-paper:#f0dfd0}
+.memory-card.memory-expanded .memory-content{
+  max-height:1200px;
+}
+.memory-card.memory-expanded .memory-content::after{
+  display:none;
+}
+.memory-expand{
+  align-self:flex-start;
+  margin-top:12px;
+  padding:0 0 3px;
+  border:0;
+  border-bottom:1px solid currentColor;
+  background:transparent;
+  color:var(--ink);
+  font:600 10px var(--sans);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  cursor:pointer;
+}
+.memory-card.featured .memory-expand{
+  color:#fff;
+}
+.memory-expand:hover{
+  opacity:.65;
+}
+@media(max-width:760px){
+  .memory-content{max-height:145px}
+}
