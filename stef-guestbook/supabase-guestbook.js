@@ -18,6 +18,39 @@
     } catch { return ""; }
   };
 
+  const addShowMore = (article) => {
+    if (article.querySelector(".memory-expand")) return;
+
+    const textBlocks = [...article.querySelectorAll(".memory-text")];
+    const totalLength = textBlocks.reduce((sum, block) => sum + block.textContent.trim().length, 0);
+    if (totalLength < 300) return;
+
+    const content = document.createElement("div");
+    content.className = "memory-content";
+    const firstText = textBlocks[0];
+    firstText.parentNode.insertBefore(content, firstText);
+    textBlocks.forEach((block) => content.appendChild(block));
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "memory-expand";
+    button.textContent = "Show more";
+    button.setAttribute("aria-expanded", "false");
+
+    button.addEventListener("click", () => {
+      const expanded = article.classList.toggle("memory-expanded");
+      button.textContent = expanded ? "Show less" : "Show more";
+      button.setAttribute("aria-expanded", String(expanded));
+    });
+
+    const meta = article.querySelector(".memory-meta");
+    meta ? article.insertBefore(button, meta) : article.appendChild(button);
+  };
+
+  const enhanceExistingMemories = () => {
+    grid.querySelectorAll(".memory-card").forEach(addShowMore);
+  };
+
   const createMemoryCard = (memory, isNew = false) => {
     const article = document.createElement("article");
     article.className = `memory-card submitted-memory ${colors[Math.floor(Math.random() * colors.length)]}`;
@@ -50,6 +83,7 @@
     meta.className = "memory-meta";
     meta.textContent = [memory.name, memory.connection, memory.location].filter(Boolean).join(" · ");
     article.appendChild(meta);
+    addShowMore(article);
     return article;
   };
 
@@ -77,6 +111,8 @@
     button.disabled = submitting;
     button.textContent = submitting ? "Adding your memory…" : "Add this memory";
   };
+
+  enhanceExistingMemories();
 
   if (!configReady || !window.supabase) {
     showStatus("The guest book is being connected. Please try again shortly.", "error");
