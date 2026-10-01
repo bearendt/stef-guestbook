@@ -25,5 +25,23 @@ create policy "Anyone can submit a memory"
 on public.memories for insert to anon, authenticated
 with check (permission = true and published = true);
 
+-- Admin access: authenticated users can manage memories.
+-- Create your admin user in Supabase Authentication and disable public sign-ups.
+drop policy if exists "Authenticated users can manage memories" on public.memories;
+create policy "Authenticated users can manage memories"
+on public.memories for select to authenticated
+using (true);
+
+drop policy if exists "Authenticated users can update memories" on public.memories;
+create policy "Authenticated users can update memories"
+on public.memories for update to authenticated
+using (true)
+with check (true);
+
+drop policy if exists "Authenticated users can delete memories" on public.memories;
+create policy "Authenticated users can delete memories"
+on public.memories for delete to authenticated
+using (true);
+
 create index if not exists memories_published_created_idx
 on public.memories (published, created_at desc);
