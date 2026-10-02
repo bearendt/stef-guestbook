@@ -630,81 +630,79 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 }
 
 
-/* Compact photo collage for Stef's people */
-.photo-collage{
-  position:relative;
-  width:min(100%, 420px);
-  min-height:500px;
+
+/* Main wedding photo + integrated photo moments */
+.about-main-photo{
+  width:250px;
   margin:0 auto;
+  transform:rotate(-4deg);
 }
-.photo-collage .paper-photo{
-  margin:0;
-  background:#fff;
-  padding:9px 9px 20px;
-  box-shadow:0 15px 34px rgba(30,48,45,.12);
-}
-.photo-collage-main{
-  position:absolute;
-  left:0;
-  top:0;
-  width:72%;
-  z-index:2;
-  transform:rotate(-3.5deg);
-}
-.photo-collage-main img{
+.about-main-photo img{
   display:block;
   width:100%;
   aspect-ratio:4/5;
   object-fit:cover;
   object-position:center;
 }
-.photo-collage-card{
-  position:absolute;
-  width:47%;
-  z-index:1;
+.photo-moments{
+  background:#f0eee6;
+  padding-top:90px;
+  padding-bottom:95px;
 }
-.photo-collage-card:nth-of-type(2){
-  right:0;
-  top:35px;
-  transform:rotate(4deg);
+.photo-moments-head{
+  max-width:760px;
+  margin:0 auto 48px;
 }
-.photo-collage-card:nth-of-type(3){
-  right:-3px;
-  bottom:55px;
-  transform:rotate(-2.5deg);
+.photo-moments-head h2{
+  margin-bottom:20px;
 }
-.photo-collage-card:nth-of-type(4){
-  left:2px;
-  bottom:0;
-  transform:rotate(3deg);
+.photo-moments-head .section-intro{
+  max-width:620px;
+  color:#5f6d68;
+  font-size:18px;
 }
-.photo-collage-card img{
+.photo-moments-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+  align-items:start;
+}
+.moment-photo{
+  margin:0;
+}
+.moment-photo:nth-child(1){transform:rotate(-1.5deg)}
+.moment-photo:nth-child(2){transform:translateY(22px) rotate(1.2deg)}
+.moment-photo:nth-child(3){transform:rotate(-.8deg)}
+.moment-photo-frame{
+  background:#fffdf8;
+  padding:12px 12px 14px;
+  border:1px solid #d8d3c8;
+  box-shadow:0 12px 26px rgba(35,48,43,.09);
+}
+.moment-photo img{
   display:block;
   width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
 }
-.photo-collage-note{
-  position:absolute;
-  right:4%;
-  bottom:-12px;
-  z-index:4;
-  font:29px/1 var(--script);
-  color:#355b5c;
-  transform:rotate(-3deg);
+.moment-photo figcaption{
+  padding:15px 8px 0;
+  color:#5c6a65;
+  font:15px/1.45 var(--serif);
+  text-align:center;
 }
 @media(max-width:900px){
-  .photo-collage{
-    min-height:520px;
-    max-width:420px;
-  }
+  .photo-moments-grid{grid-template-columns:1fr 1fr}
+  .moment-photo:nth-child(2){transform:rotate(1.2deg)}
+  .moment-photo:nth-child(3){grid-column:1/-1;max-width:55%;justify-self:center}
 }
 @media(max-width:760px){
-  .photo-collage{
-    min-height:450px;
-    width:min(100%, 360px);
-  }
-  .photo-collage-note{
-    font-size:25px;
-  }
+  .about-main-photo{width:min(100%,260px)}
+  .photo-moments{padding-top:70px;padding-bottom:75px}
+  .photo-moments-grid{grid-template-columns:1fr;max-width:420px;margin:auto;gap:42px}
+  .moment-photo:nth-child(1),
+  .moment-photo:nth-child(2),
+  .moment-photo:nth-child(3){transform:none}
+  .moment-photo:nth-child(2){margin-top:0}
+  .moment-photo:nth-child(3){grid-column:auto;max-width:none}
 }
