@@ -631,78 +631,33 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 
 
 
-/* Main wedding photo + integrated photo moments */
-.about-main-photo{
-  width:250px;
-  margin:0 auto;
-  transform:rotate(-4deg);
-}
-.about-main-photo img{
-  display:block;
-  width:100%;
-  aspect-ratio:4/5;
-  object-fit:cover;
-  object-position:center;
-}
-.photo-moments{
-  background:#f0eee6;
-  padding-top:90px;
-  padding-bottom:95px;
-}
-.photo-moments-head{
-  max-width:760px;
-  margin:0 auto 48px;
-}
-.photo-moments-head h2{
-  margin-bottom:20px;
-}
-.photo-moments-head .section-intro{
-  max-width:620px;
-  color:#5f6d68;
-  font-size:18px;
-}
-.photo-moments-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:28px;
-  align-items:start;
-}
-.moment-photo{
+/* Added photos are part of the memory wall, scattered between memories */
+.memory-photo-added{
   margin:0;
+  align-self:start;
+  background:transparent;
+  box-shadow:none;
+  border:0;
+  padding:0;
 }
-.moment-photo:nth-child(1){transform:rotate(-1.5deg)}
-.moment-photo:nth-child(2){transform:translateY(22px) rotate(1.2deg)}
-.moment-photo:nth-child(3){transform:rotate(-.8deg)}
-.moment-photo-frame{
+.memory-photo-added .memory-photo-frame{
   background:#fffdf8;
-  padding:12px 12px 14px;
+  padding:10px 10px 12px;
   border:1px solid #d8d3c8;
   box-shadow:0 12px 26px rgba(35,48,43,.09);
 }
-.moment-photo img{
+.memory-photo-added img{
   display:block;
   width:100%;
   aspect-ratio:4/3;
   object-fit:cover;
 }
-.moment-photo figcaption{
-  padding:15px 8px 0;
-  color:#5c6a65;
-  font:15px/1.45 var(--serif);
-  text-align:center;
-}
-@media(max-width:900px){
-  .photo-moments-grid{grid-template-columns:1fr 1fr}
-  .moment-photo:nth-child(2){transform:rotate(1.2deg)}
-  .moment-photo:nth-child(3){grid-column:1/-1;max-width:55%;justify-self:center}
-}
+.memory-photo-added:nth-of-type(1){transform:rotate(1.2deg)}
+.memory-photo-added:nth-of-type(2){transform:rotate(-1.4deg)}
+.memory-photo-added:nth-of-type(3){transform:rotate(.8deg)}
 @media(max-width:760px){
-  .about-main-photo{width:min(100%,260px)}
-  .photo-moments{padding-top:70px;padding-bottom:75px}
-  .photo-moments-grid{grid-template-columns:1fr;max-width:420px;margin:auto;gap:42px}
-  .moment-photo:nth-child(1),
-  .moment-photo:nth-child(2),
-  .moment-photo:nth-child(3){transform:none}
-  .moment-photo:nth-child(2){margin-top:0}
-  .moment-photo:nth-child(3){grid-column:auto;max-width:none}
+  .memory-photo-added{max-width:100%;margin:4px 0 10px}
+  .memory-photo-added:nth-of-type(1),
+  .memory-photo-added:nth-of-type(2),
+  .memory-photo-added:nth-of-type(3){transform:none}
 }
