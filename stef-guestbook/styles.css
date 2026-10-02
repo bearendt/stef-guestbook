@@ -628,3 +628,83 @@ footer{border-top:1px solid var(--line);padding:28px 0;background:#f1eee5}
 @media(max-width:760px){
   .memory-content{max-height:145px}
 }
+
+
+/* Compact photo collage for Stef's people */
+.photo-collage{
+  position:relative;
+  width:min(100%, 420px);
+  min-height:500px;
+  margin:0 auto;
+}
+.photo-collage .paper-photo{
+  margin:0;
+  background:#fff;
+  padding:9px 9px 20px;
+  box-shadow:0 15px 34px rgba(30,48,45,.12);
+}
+.photo-collage-main{
+  position:absolute;
+  left:0;
+  top:0;
+  width:72%;
+  z-index:2;
+  transform:rotate(-3.5deg);
+}
+.photo-collage-main img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center;
+}
+.photo-collage-card{
+  position:absolute;
+  width:47%;
+  z-index:1;
+}
+.photo-collage-card:nth-of-type(2){
+  right:0;
+  top:35px;
+  transform:rotate(4deg);
+}
+.photo-collage-card:nth-of-type(3){
+  right:-3px;
+  bottom:55px;
+  transform:rotate(-2.5deg);
+}
+.photo-collage-card:nth-of-type(4){
+  left:2px;
+  bottom:0;
+  transform:rotate(3deg);
+}
+.photo-collage-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+}
+.photo-collage-note{
+  position:absolute;
+  right:4%;
+  bottom:-12px;
+  z-index:4;
+  font:29px/1 var(--script);
+  color:#355b5c;
+  transform:rotate(-3deg);
+}
+@media(max-width:900px){
+  .photo-collage{
+    min-height:520px;
+    max-width:420px;
+  }
+}
+@media(max-width:760px){
+  .photo-collage{
+    min-height:450px;
+    width:min(100%, 360px);
+  }
+  .photo-collage-note{
+    font-size:25px;
+  }
+}
